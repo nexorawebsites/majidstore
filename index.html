@@ -1,0 +1,2959 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SportsFusion Store - Luxury Perfumes, Football Equipment & Sports Gear. Premium quality products with fast delivery.">
+    <title>SportsFusion Store | Luxury Perfumes • Football Equipment • Sports Gear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0066ff;
+            --primary-dark: #0052cc;
+            --primary-light: #3385ff;
+            --black: #000000;
+            --white: #ffffff;
+            --dark-blue: #001a3a;
+            --light-blue: #e6f0ff;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --silver: #c0c0c0;
+            --dark-gray: #1f2937;
+            --card-bg: rgba(255,255,255,0.05);
+            --glass-bg: rgba(255,255,255,0.08);
+            --glass-border: rgba(255,255,255,0.12);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+            --shadow-xl: 0 16px 60px rgba(0,0,0,0.2);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--light-gray); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-dark); }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--light-blue);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== NAVIGATION ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 12px 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .nav-logo-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--white);
+            font-weight: 800;
+        }
+
+        .nav-logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo-text span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,102,255,0.4);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--primary);
+        }
+
+        .mobile-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000814 0%, #001233 30%, #001845 60%, #002855 100%);
+            overflow: hidden;
+        }
+
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 25% 25%, var(--primary) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, var(--primary) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+        }
+
+        .hero-gradient-orb.orb-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            top: -150px;
+            right: -100px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-gradient-orb.orb-2 {
+            width: 400px;
+            height: 400px;
+            background: #0044aa;
+            bottom: -100px;
+            left: -100px;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+
+        .hero-gradient-orb.orb-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary-light);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.15;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            padding: 0 24px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,102,255,0.15);
+            border: 1px solid rgba(0,102,255,0.3);
+            padding: 10px 24px;
+            border-radius: 50px;
+            color: var(--primary-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            animation: fadeInDown 1s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge i {
+            font-size: 0.7rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .hero-title {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.05;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--primary), #4d94ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 20px;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-categories {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero-cat-tag {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-cat-tag i {
+            color: var(--primary);
+        }
+
+        .hero-cat-divider {
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(0,102,255,0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            background: rgba(0,102,255,0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: fadeIn 1s ease 1s both;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* Floating elements */
+        .hero-float {
+            position: absolute;
+            z-index: 5;
+        }
+
+        .hero-float-1 {
+            top: 20%;
+            left: 8%;
+            width: 60px;
+            height: 60px;
+            background: rgba(0,102,255,0.1);
+            border: 1px solid rgba(0,102,255,0.2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            animation: float 4s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-float-2 {
+            top: 30%;
+            right: 8%;
+            width: 50px;
+            height: 50px;
+            background: rgba(0,102,255,0.1);
+            border: 1px solid rgba(0,102,255,0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            animation: float 5s ease-in-out infinite 1s;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-float-3 {
+            bottom: 25%;
+            left: 12%;
+            width: 55px;
+            height: 55px;
+            background: rgba(0,102,255,0.1);
+            border: 1px solid rgba(0,102,255,0.2);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            animation: float 6s ease-in-out infinite 0.5s;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-float-4 {
+            bottom: 30%;
+            right: 10%;
+            width: 45px;
+            height: 45px;
+            background: rgba(0,102,255,0.1);
+            border: 1px solid rgba(0,102,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            animation: float 4.5s ease-in-out infinite 1.5s;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ==================== SEARCH SECTION ==================== */
+        .search-section {
+            background: var(--white);
+            padding: 60px 0;
+            position: relative;
+            z-index: 20;
+            margin-top: -60px;
+        }
+
+        .search-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-box {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: var(--shadow-xl);
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .search-box:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 8px 40px rgba(0,102,255,0.2);
+        }
+
+        .search-box i {
+            padding: 0 20px;
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            background: transparent;
+            padding: 14px 0;
+        }
+
+        .search-box input::placeholder {
+            color: var(--silver);
+        }
+
+        .search-box button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-box button:hover {
+            background: var(--primary-dark);
+        }
+
+        .search-results {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 100;
+            border: 1px solid var(--light-gray);
+        }
+
+        .search-results.active {
+            display: block;
+        }
+
+        .search-result-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 24px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-item:hover {
+            background: var(--light-blue);
+        }
+
+        .search-result-img {
+            width: 56px;
+            height: 56px;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .search-result-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 2px;
+        }
+
+        .search-result-info p {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        .search-result-price {
+            margin-left: auto;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .search-no-results {
+            padding: 32px;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        .search-tags {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-tag {
+            background: var(--light-gray);
+            color: var(--gray);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-tag:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ==================== CATEGORIES ==================== */
+        .categories-section {
+            background: var(--light-gray);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            height: 420px;
+            cursor: pointer;
+            transition: var(--transition);
+            group: true;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .category-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            transition: var(--transition);
+        }
+
+        .category-card:nth-child(1) .category-bg {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        }
+
+        .category-card:nth-child(2) .category-bg {
+            background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+        }
+
+        .category-card:nth-child(3) .category-bg {
+            background: linear-gradient(135deg, #10002b, #240046, #3c096c);
+        }
+
+        .category-card:hover .category-bg {
+            transform: scale(1.05);
+        }
+
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
+            z-index: 2;
+        }
+
+        .category-icon-large {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            z-index: 3;
+            font-size: 5rem;
+            color: rgba(255,255,255,0.15);
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-icon-large {
+            color: rgba(0,102,255,0.3);
+            transform: translate(-50%, -65%) scale(1.1);
+        }
+
+        .category-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px;
+            z-index: 3;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: rgba(0,102,255,0.2);
+            color: var(--primary-light);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(0,102,255,0.3);
+        }
+
+        .category-content h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+
+        .category-content p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .category-link {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .category-link:hover {
+            gap: 14px;
+        }
+
+        /* ==================== PRODUCTS ==================== */
+        .products-section {
+            background: var(--white);
+        }
+
+        .products-tabs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .products-tab {
+            background: var(--light-gray);
+            color: var(--gray);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .products-tab.active, .products-tab:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0,102,255,0.2);
+        }
+
+        .product-image {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            background: var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image {
+            background: var(--light-blue);
+        }
+
+        .product-image .product-emoji {
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-emoji {
+            transform: scale(1.15);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-new {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .badge-hot {
+            background: #ef4444;
+            color: var(--white);
+        }
+
+        .badge-sale {
+            background: #10b981;
+            color: var(--white);
+        }
+
+        .product-wishlist {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            border: none;
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .product-wishlist:hover {
+            background: #ef4444;
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-category-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .product-stars {
+            display: flex;
+            gap: 2px;
+            color: #fbbf24;
+            font-size: 0.8rem;
+        }
+
+        .product-rating-text {
+            font-size: 0.8rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .product-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+        }
+
+        .product-price .currency {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .product-stock {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .stock-in {
+            color: #10b981;
+        }
+
+        .stock-low {
+            color: #f59e0b;
+        }
+
+        .stock-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        .stock-in .stock-dot {
+            background: #10b981;
+        }
+
+        .stock-low .stock-dot {
+            background: #f59e0b;
+        }
+
+        .product-order-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px;
+            margin-top: 16px;
+            background: #25d366;
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .product-order-btn:hover {
+            background: #1ebe57;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+        }
+
+        .product-order-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* ==================== WHY CHOOSE US ==================== */
+        .why-section {
+            background: linear-gradient(135deg, #000814, #001233, #001845);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-section .section-title {
+            color: var(--white);
+        }
+
+        .why-section .section-subtitle {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .why-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(30deg, var(--primary) 12%, transparent 12.5%, transparent 87%, var(--primary) 87.5%, var(--primary)),
+                linear-gradient(150deg, var(--primary) 12%, transparent 12.5%, transparent 87%, var(--primary) 87.5%, var(--primary)),
+                linear-gradient(30deg, var(--primary) 12%, transparent 12.5%, transparent 87%, var(--primary) 87.5%, var(--primary)),
+                linear-gradient(150deg, var(--primary) 12%, transparent 12.5%, transparent 87%, var(--primary) 87.5%, var(--primary));
+            background-size: 80px 140px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .why-card:hover {
+            background: rgba(0,102,255,0.1);
+            border-color: rgba(0,102,255,0.3);
+            transform: translateY(-6px);
+        }
+
+        .why-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(0,102,255,0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            transition: var(--transition);
+        }
+
+        .why-card:hover .why-icon {
+            background: var(--primary);
+            color: var(--white);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .why-card h3 {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* ==================== STATISTICS ==================== */
+        .stats-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            background: var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            background: var(--light-blue);
+            transform: translateY(-4px);
+        }
+
+        .stat-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.3rem;
+            color: var(--white);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--dark-blue);
+            margin-bottom: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        /* ==================== TESTIMONIALS ==================== */
+        .testimonials-section {
+            background: var(--light-gray);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(0,102,255,0.15);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            color: #fbbf24;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            color: var(--dark-gray);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: var(--light-blue);
+        }
+
+        .testimonial-author-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--dark-blue);
+        }
+
+        .testimonial-author-role {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* ==================== GALLERY ==================== */
+        .gallery-section {
+            background: var(--white);
+        }
+
+        .gallery-masonry {
+            columns: 4;
+            column-gap: 16px;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 16px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .gallery-item:nth-child(1) .gallery-item-inner { height: 300px; background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .gallery-item:nth-child(2) .gallery-item-inner { height: 200px; background: linear-gradient(135deg, #0d1b2a, #1b263b); }
+        .gallery-item:nth-child(3) .gallery-item-inner { height: 250px; background: linear-gradient(135deg, #2d1b69, #11001c); }
+        .gallery-item:nth-child(4) .gallery-item-inner { height: 320px; background: linear-gradient(135deg, #003049, #004e7c); }
+        .gallery-item:nth-child(5) .gallery-item-inner { height: 280px; background: linear-gradient(135deg, #1b1b2f, #162447); }
+        .gallery-item:nth-child(6) .gallery-item-inner { height: 180px; background: linear-gradient(135deg, #0b0c10, #1f2833); }
+        .gallery-item:nth-child(7) .gallery-item-inner { height: 240px; background: linear-gradient(135deg, #1a1a2e, #0f3460); }
+        .gallery-item:nth-child(8) .gallery-item-inner { height: 200px; background: linear-gradient(135deg, #10002b, #240046); }
+        .gallery-item:nth-child(9) .gallery-item-inner { height: 260px; background: linear-gradient(135deg, #0d1b2a, #415a77); }
+        .gallery-item:nth-child(10) .gallery-item-inner { height: 220px; background: linear-gradient(135deg, #001845, #001233); }
+        .gallery-item:nth-child(11) .gallery-item-inner { height: 300px; background: linear-gradient(135deg, #3c096c, #5a189a); }
+        .gallery-item:nth-child(12) .gallery-item-inner { height: 190px; background: linear-gradient(135deg, #003566, #001d3d); }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,102,255,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        /* ==================== CONTACT ==================== */
+        .contact-section {
+            background: var(--light-gray);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 20px 0;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin-bottom: 16px;
+        }
+
+        .contact-info > p {
+            color: var(--gray);
+            margin-bottom: 36px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 36px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-item-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--light-blue);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item-text h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 2px;
+        }
+
+        .contact-item-text p {
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .contact-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: var(--light-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(0,102,255,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .form-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,102,255,0.4);
+        }
+
+        .whatsapp-contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            margin-top: 16px;
+            background: #25d366;
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-contact-btn:hover {
+            background: #1ebe57;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: linear-gradient(to bottom, #000814, #000000);
+            color: var(--white);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .footer-brand .nav-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            max-width: 320px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-social:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* ==================== FLOATING WHATSAPP ==================== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: var(--white);
+            text-decoration: none;
+            box-shadow: 0 4px 24px rgba(37,211,102,0.5);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 32px rgba(37,211,102,0.6);
+        }
+
+        /* ==================== BACK TO TOP ==================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            left: 32px;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            box-shadow: var(--shadow-md);
+            z-index: 999;
+            transition: var(--transition);
+            opacity: 0;
+            pointer-events: none;
+            font-size: 1.1rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            background: var(--primary-dark);
+        }
+
+        /* ==================== LOADING SCREEN ==================== */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(0,102,255,0.2);
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            animation: rotate 1s linear infinite;
+        }
+
+        .loading-text {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-card {
+                height: 320px;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-masonry {
+                columns: 3;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero-title {
+                letter-spacing: -1px;
+            }
+
+            .hero-float {
+                display: none;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-masonry {
+                columns: 2;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-box button {
+                padding: 14px 20px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-masonry {
+                columns: 1;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">SPORTSFUSION</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="nav-logo-icon">SF</div>
+                <div class="nav-logo-text">Sports<span>Fusion</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#products" class="nav-btn"><i class="fas fa-shopping-bag"></i> Shop Now</a>
+                <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#categories" onclick="toggleMobileMenu()">Categories</a>
+        <a href="#products" onclick="toggleMobileMenu()">Products</a>
+        <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
+        <a href="#testimonials" onclick="toggleMobileMenu()">Reviews</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-gradient-orb orb-1"></div>
+        <div class="hero-gradient-orb orb-2"></div>
+        <div class="hero-gradient-orb orb-3"></div>
+
+        <div class="hero-float hero-float-1">🏆</div>
+        <div class="hero-float hero-float-2">⚽</div>
+        <div class="hero-float hero-float-3">🏋️</div>
+        <div class="hero-float hero-float-4">✨</div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-circle"></i>
+                Premium Sports & Lifestyle Store
+            </div>
+            <h1 class="hero-title">
+                Everything You Need<br>
+                <span class="highlight">In One Place</span>
+            </h1>
+            <p class="hero-subtitle">Discover premium luxury perfumes, professional football equipment, and top-tier sports gear — all curated for champions.</p>
+            <div class="hero-categories">
+                <div class="hero-cat-tag"><i class="fas fa-spray-can-sparkles"></i> Luxury Perfumes</div>
+                <div class="hero-cat-divider"></div>
+                <div class="hero-cat-tag"><i class="fas fa-futbol"></i> Football Equipment</div>
+                <div class="hero-cat-divider"></div>
+                <div class="hero-cat-tag"><i class="fas fa-dumbbell"></i> Sports Gear</div>
+            </div>
+            <div class="hero-cta">
+                <a href="#products" class="btn-primary"><i class="fas fa-bag-shopping"></i> Explore Products</a>
+                <a href="#categories" class="btn-secondary"><i class="fas fa-th-large"></i> Browse Categories</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="search">
+        <div class="container">
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search perfumes, football gear, sports equipment..." autocomplete="off">
+                    <button onclick="performSearch()">Search</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+                <div class="search-tags">
+                    <button class="search-tag" onclick="searchTag('Perfume')">🧴 Perfumes</button>
+                    <button class="search-tag" onclick="searchTag('Football')">⚽ Football</button>
+                    <button class="search-tag" onclick="searchTag('Dumbbell')">🏋️ Gym</button>
+                    <button class="search-tag" onclick="searchTag('Nike')">👟 Nike</button>
+                    <button class="search-tag" onclick="searchTag('Adidas')">⭐ Adidas</button>
+                    <button class="search-tag" onclick="searchTag('Oud')">🌿 Oud</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section section-padding" id="categories">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-th-large"></i> Categories</div>
+                <h2 class="section-title">Explore Our <span class="gradient-text">Collections</span></h2>
+                <p class="section-subtitle">Three unique worlds of premium products, curated for those who demand the best.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card animate-on-scroll" onclick="filterProducts('perfumes')">
+                    <div class="category-bg"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-icon-large">🧴</div>
+                    <div class="category-content">
+                        <span class="category-tag">Premium Collection</span>
+                        <h3>Luxury Perfumes</h3>
+                        <p>Exclusive fragrances from world-renowned brands. Find your signature scent.</p>
+                        <span class="category-link">Explore Collection <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="category-card animate-on-scroll" onclick="filterProducts('football')">
+                    <div class="category-bg"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-icon-large">⚽</div>
+                    <div class="category-content">
+                        <span class="category-tag">Pro Equipment</span>
+                        <h3>Football Equipment</h3>
+                        <p>Professional-grade boots, jerseys, balls, and gear for every level of play.</p>
+                        <span class="category-link">Explore Collection <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <div class="category-card animate-on-scroll" onclick="filterProducts('sports')">
+                    <div class="category-bg"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-icon-large">🏋️</div>
+                    <div class="category-content">
+                        <span class="category-tag">Active Lifestyle</span>
+                        <h3>Sports Equipment</h3>
+                        <p>Premium fitness and sports gear to power your training and performance.</p>
+                        <span class="category-link">Explore Collection <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section section-padding" id="products">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-fire"></i> Our Products</div>
+                <h2 class="section-title">Featured <span class="gradient-text">Products</span></h2>
+                <p class="section-subtitle">Handpicked premium products across all categories for the ultimate shopping experience.</p>
+            </div>
+
+            <div class="products-tabs animate-on-scroll">
+                <button class="products-tab active" onclick="filterProducts('all')">All Products</button>
+                <button class="products-tab" onclick="filterProducts('perfumes')">🧴 Perfumes</button>
+                <button class="products-tab" onclick="filterProducts('football')">⚽ Football</button>
+                <button class="products-tab" onclick="filterProducts('sports')">🏋️ Sports</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-section section-padding" id="why">
+        <div class="why-bg-pattern"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge" style="background:rgba(0,102,255,0.15);border:1px solid rgba(0,102,255,0.3)"><i class="fas fa-award"></i> Why Us</div>
+                <h2 class="section-title" style="color:#fff">Why Choose <span class="gradient-text">SportsFusion</span></h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.6)">We're committed to providing an exceptional shopping experience.</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Premium Quality</h3>
+                    <p>Every product is carefully selected to ensure the highest quality and authenticity.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable delivery service across Lebanon and the region.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Secure Orders</h3>
+                    <p>Your orders are protected and processed with the highest security standards.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated team is always ready to help with any questions or concerns.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>100% Authentic</h3>
+                    <p>We guarantee all products are genuine and sourced from authorized distributors.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing without compromising on quality. Best value guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-chart-line"></i> Our Numbers</div>
+                <h2 class="section-title">Trusted by <span class="gradient-text">Thousands</span></h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-box-open"></i></div>
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">Products Sold</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number" data-target="8500">0</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <div class="stat-number" data-target="12000">0</div>
+                    <div class="stat-label">Orders Delivered</div>
+                </div>
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-number" data-target="99" data-suffix="%">0</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section-padding" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-quote-left"></i> Testimonials</div>
+                <h2 class="section-title">What Our <span class="gradient-text">Customers Say</span></h2>
+                <p class="section-subtitle">Real reviews from real customers who trust SportsFusion.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Amazing quality perfumes! I ordered Sauvage and it arrived the next day. The price was much better than anywhere else. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👨</div>
+                        <div>
+                            <div class="testimonial-author-name">Ahmad K.</div>
+                            <div class="testimonial-author-role">Beirut, Lebanon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The football boots I got from SportsFusion are incredible. Professional quality at an affordable price. My go-to store for all sports gear now!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👩</div>
+                        <div>
+                            <div class="testimonial-author-name">Sara M.</div>
+                            <div class="testimonial-author-role">Tripoli, Lebanon</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Best gym equipment collection in Lebanon! The resistance bands and dumbbells are top quality. Customer service on WhatsApp was super fast and helpful."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">👨</div>
+                        <div>
+                            <div class="testimonial-author-name">Hassan R.</div>
+                            <div class="testimonial-author-role">Sidon, Lebanon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section section-padding" id="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-images"></i> Gallery</div>
+                <h2 class="section-title">Our <span class="gradient-text">Collection Gallery</span></h2>
+                <p class="section-subtitle">A visual showcase of our premium products across all categories.</p>
+            </div>
+
+            <div class="gallery-masonry animate-on-scroll">
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🧴<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">⚽<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🏋️<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">👟<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🏆<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🥊<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🎽<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">💎<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🏀<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🎯<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">✨<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner">🏈<div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge"><i class="fas fa-envelope"></i> Contact Us</div>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Have a question? We'd love to hear from you. Reach out anytime!</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's Start a Conversation</h3>
+                    <p>Whether you need help choosing the perfect perfume, finding the right football gear, or selecting sports equipment — our team is here to assist you.</p>
+
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div class="contact-item-text">
+                                <h4>WhatsApp</h4>
+                                <p>+961 79 191 280</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Phone</h4>
+                                <p>+961 79 191 280</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Email</h4>
+                                <p>info@sportsfusion.store</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Location</h4>
+                                <p>Lebanon — Nationwide Delivery</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" onsubmit="handleContactForm(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="Perfumes">Luxury Perfumes</option>
+                                <option value="Football">Football Equipment</option>
+                                <option value="Sports">Sports Equipment</option>
+                                <option value="Order">Order Inquiry</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell us how we can help..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                    <a href="https://wa.me/96179191280?text=Hello%2C%20I%20would%20like%20to%20get%20in%20touch%20with%20SportsFusion%20Store." class="whatsapp-contact-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp Instead
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <div class="nav-logo-icon">SF</div>
+                        <div class="nav-logo-text">Sports<span>Fusion</span></div>
+                    </a>
+                    <p>Your one-stop destination for luxury perfumes, professional football equipment, and premium sports gear. Quality meets passion.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Home</a></li>
+                        <li><a href="#categories"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Categories</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Products</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Reviews</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="filterProducts('perfumes')"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Luxury Perfumes</a></li>
+                        <li><a href="#" onclick="filterProducts('football')"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Football Equipment</a></li>
+                        <li><a href="#" onclick="filterProducts('sports')"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Sports Equipment</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> Best Sellers</a></li>
+                        <li><a href="#products"><i class="fas fa-chevron-right" style="font-size:0.6rem"></i> New Arrivals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/96179191280" target="_blank"><i class="fab fa-whatsapp"></i> +961 79 191 280</a></li>
+                        <li><a href="tel:+96179191280"><i class="fas fa-phone" style="font-size:0.7rem"></i> +961 79 191 280</a></li>
+                        <li><a href="mailto:info@sportsfusion.store"><i class="fas fa-envelope" style="font-size:0.7rem"></i> info@sportsfusion.store</a></li>
+                        <li><a href="#"><i class="fas fa-location-dot" style="font-size:0.7rem"></i> Lebanon</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 SportsFusion Store. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/96179191280?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20SportsFusion%20products." class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // ==================== PRODUCT DATA ====================
+        const products = [
+            // PERFUMES
+            {
+                id: 1, name: "Dior Sauvage EDP", price: 120, category: "perfumes",
+                emoji: "🧴", desc: "A fresh and bold fragrance with notes of bergamot, pepper, and ambroxan.",
+                rating: 4.9, reviews: 342, stock: "in", badge: "hot",
+                catLabel: "Luxury Perfume"
+            },
+            {
+                id: 2, name: "Bleu de Chanel", price: 135, category: "perfumes",
+                emoji: "💎", desc: "Elegant woody aromatic fragrance for the modern sophisticated man.",
+                rating: 4.8, reviews: 289, stock: "in", badge: "new",
+                catLabel: "Luxury Perfume"
+            },
+            {
+                id: 3, name: "Tom Ford Oud Wood", price: 250, category: "perfumes",
+                emoji: "✨", desc: "A luxurious blend of oud, rosewood, cardamom, and Chinese pepper.",
+                rating: 4.9, reviews: 198, stock: "low", badge: "hot",
+                catLabel: "Luxury Perfume"
+            },
+            {
+                id: 4, name: "Versace Eros", price: 95, category: "perfumes",
+                emoji: "🌿", desc: "A vibrant fragrance with mint, green apple, and vanilla.",
+                rating: 4.7, reviews: 412, stock: "in", badge: "sale",
+                catLabel: "Luxury Perfume"
+            },
+            {
+                id: 5, name: "Creed Aventus", price: 320, category: "perfumes",
+                emoji: "👑", desc: "The king of fragrances — pineapple, birch, oakmoss, and musk.",
+                rating: 5.0, reviews: 156, stock: "low", badge: "hot",
+                catLabel: "Luxury Perfume"
+            },
+            {
+                id: 6, name: "YSL La Nuit de L'Homme", price: 110, category: "perfumes",
+                emoji: "🌙", desc: "A seductive blend of cardamom, cedar, and coumarin for evening wear.",
+                rating: 4.6, reviews: 267, stock: "in", badge: "new",
+                catLabel: "Luxury Perfume"
+            },
+            // FOOTBALL
+            {
+                id: 7, name: "Nike Mercurial Superfly 9", price: 180, category: "football",
+                emoji: "👟", desc: "Elite football boots with Zoom Air technology for explosive speed.",
+                rating: 4.8, reviews: 523, stock: "in", badge: "hot",
+                catLabel: "Football Equipment"
+            },
+            {
+                id: 8, name: "Adidas Predator Edge", price: 165, category: "football",
+                emoji: "⚽", desc: "Precision-engineered boots with Zone Skin for ultimate ball control.",
+                rating: 4.7, reviews: 398, stock: "in", badge: "new",
+                catLabel: "Football Equipment"
+            },
+            {
+                id: 9, name: "Nike Flight Official Match Ball", price: 85, category: "football",
+                emoji: "🏐", desc: "FIFA Quality Pro certified match ball with Aerowsculpt technology.",
+                rating: 4.9, reviews: 245, stock: "in", badge: "sale",
+                catLabel: "Football Equipment"
+            },
+            {
+                id: 10, name: "Nike Academy Training Kit", price: 55, category: "football",
+                emoji: "🎽", desc: "Complete training jersey set with Dri-FIT moisture-wicking technology.",
+                rating: 4.5, reviews: 678, stock: "in", badge: "new",
+                catLabel: "Football Equipment"
+            },
+            {
+                id: 11, name: "Adidas Goalkeeper Gloves Pro", price: 75, category: "football",
+                emoji: "🧤", desc: "Professional goalkeeper gloves with URG 2.0 latex palm for superior grip.",
+                rating: 4.6, reviews: 189, stock: "in", badge: "",
+                catLabel: "Football Equipment"
+            },
+            {
+                id: 12, name: "Puma King Platinum 21", price: 155, category: "football",
+                emoji: "👑", desc: "Premium K-leather football boots built for touch and comfort on any pitch.",
+                rating: 4.7, reviews: 134, stock: "low", badge: "hot",
+                catLabel: "Football Equipment"
+            },
+            // SPORTS
+            {
+                id: 13, name: "Adjustable Dumbbell Set 40kg", price: 220, category: "sports",
+                emoji: "🏋️", desc: "Quick-adjust dumbbell set from 5-40kg. Perfect for home gym workouts.",
+                rating: 4.8, reviews: 345, stock: "in", badge: "hot",
+                catLabel: "Sports Equipment"
+            },
+            {
+                id: 14, name: "Premium Resistance Bands Set", price: 35, category: "sports",
+                emoji: "💪", desc: "5-piece resistance band set with different strengths for full-body training.",
+                rating: 4.6, reviews: 892, stock: "in", badge: "sale",
+                catLabel: "Sports Equipment"
+            },
+            {
+                id: 15, name: "Nike Pro Boxing Gloves 14oz", price: 95, category: "sports",
+                emoji: "🥊", desc: "Professional-grade boxing gloves with layered foam for maximum protection.",
+                rating: 4.7, reviews: 234, stock: "in", badge: "new",
+                catLabel: "Sports Equipment"
+            },
+            {
+                id: 16, name: "Wilson NBA Official Basketball", price: 65, category: "sports",
+                emoji: "🏀", desc: "Official NBA game ball with moisture-absorbing composite leather.",
+                rating: 4.8, reviews: 456, stock: "in", badge: "",
+                catLabel: "Sports Equipment"
+            },
+            {
+                id: 17, name: "Premium Yoga Mat 6mm", price: 45, category: "sports",
+                emoji: "🧘", desc: "Non-slip TPE yoga mat with alignment lines. Eco-friendly and durable.",
+                rating: 4.5, reviews: 567, stock: "in", badge: "sale",
+                catLabel: "Sports Equipment"
+            },
+            {
+                id: 18, name: "Adidas Speed Jump Rope Pro", price: 28, category: "sports",
+                emoji: "🏃", desc: "Weighted speed rope with ball-bearing handles for cardio training.",
+                rating: 4.4, reviews: 723, stock: "in", badge: "new",
+                catLabel: "Sports Equipment"
+            }
+        ];
+
+        // ==================== RENDER PRODUCTS ====================
+        function renderProducts(productList) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+
+            productList.forEach((product, index) => {
+                const stars = generateStars(product.rating);
+                const stockHTML = product.stock === 'in'
+                    ? '<div class="product-stock stock-in"><span class="stock-dot"></span> In Stock</div>'
+                    : '<div class="product-stock stock-low"><span class="stock-dot"></span> Low Stock</div>';
+
+                let badgeHTML = '';
+                if (product.badge === 'new') badgeHTML = '<span class="badge badge-new">New</span>';
+                else if (product.badge === 'hot') badgeHTML = '<span class="badge badge-hot">Hot</span>';
+                else if (product.badge === 'sale') badgeHTML = '<span class="badge badge-sale">Sale</span>';
+
+                const whatsappMsg = encodeURIComponent(
+                    `Hello,\n\nI would like to order:\n\nProduct Name: ${product.name}\nPrice: $${product.price}\n\nPlease provide more details.`
+                );
+
+                const card = document.createElement('div');
+                card.className = 'product-card animate-on-scroll';
+                card.style.animationDelay = `${index * 0.05}s`;
+                card.innerHTML = `
+                    <div class="product-image">
+                        <div class="product-badge">${badgeHTML}</div>
+                        <button class="product-wishlist" onclick="event.stopPropagation(); this.style.background='#ef4444'; this.style.color='#fff';"><i class="far fa-heart"></i></button>
+                        <span class="product-emoji">${product.emoji}</span>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category-tag">${product.catLabel}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-desc">${product.desc}</p>
+                        <div class="product-rating">
+                            <div class="product-stars">${stars}</div>
+                            <span class="product-rating-text">${product.rating} (${product.reviews})</span>
+                        </div>
+                        <div class="product-bottom">
+                            <div class="product-price">$${product.price} <span class="currency">USD</span></div>
+                            ${stockHTML}
+                        </div>
+                        <a href="https://wa.me/96179191280?text=${whatsappMsg}" target="_blank" class="product-order-btn">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            // Re-observe new elements for scroll animation
+            observeElements();
+        }
+
+        function generateStars(rating) {
+            let html = '';
+            const fullStars = Math.floor(rating);
+            const hasHalf = rating % 1 >= 0.5;
+            for (let i = 0; i < fullStars; i++) html += '<i class="fas fa-star"></i>';
+            if (hasHalf) html += '<i class="fas fa-star-half-alt"></i>';
+            const empty = 5 - fullStars - (hasHalf ? 1 : 0);
+            for (let i = 0; i < empty; i++) html += '<i class="far fa-star"></i>';
+            return html;
+        }
+
+        // ==================== FILTER PRODUCTS ====================
+        function filterProducts(category) {
+            const tabs = document.querySelectorAll('.products-tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const tabMap = { all: 0, perfumes: 1, football: 2, sports: 3 };
+            if (tabMap[category] !== undefined) {
+                tabs[tabMap[category]].classList.add('active');
+            }
+
+            let filtered = products;
+            if (category !== 'all') {
+                filtered = products.filter(p => p.category === category);
+            }
+
+            renderProducts(filtered);
+
+            // Scroll to products section
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // ==================== SEARCH SYSTEM ====================
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+
+        searchInput.addEventListener('input', function () {
+            const query = this.value.trim().toLowerCase();
+            if (query.length < 1) {
+                searchResults.classList.remove('active');
+                return;
+            }
+
+            const results = products.filter(p =>
+                p.name.toLowerCase().includes(query) ||
+                p.desc.toLowerCase().includes(query) ||
+                p.category.toLowerCase().includes(query) ||
+                p.catLabel.toLowerCase().includes(query)
+            );
+
+            if (results.length > 0) {
+                searchResults.innerHTML = results.map(p => {
+                    const whatsappMsg = encodeURIComponent(
+                        `Hello,\n\nI would like to order:\n\nProduct Name: ${p.name}\nPrice: $${p.price}\n\nPlease provide more details.`
+                    );
+                    return `
+                        <div class="search-result-item" onclick="window.open('https://wa.me/96179191280?text=${whatsappMsg}', '_blank')">
+                            <div class="search-result-img">${p.emoji}</div>
+                            <div class="search-result-info">
+                                <h4>${p.name}</h4>
+                                <p>${p.catLabel}</p>
+                            </div>
+                            <div class="search-result-price">$${p.price}</div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                searchResults.innerHTML = '<div class="search-no-results"><i class="fas fa-search" style="font-size:2rem;color:#ccc;margin-bottom:12px;display:block"></i>No products found for "' + this.value + '"</div>';
+            }
+
+            searchResults.classList.add('active');
+        });
+
+        function performSearch() {
+            const event = new Event('input');
+            searchInput.dispatchEvent(event);
+        }
+
+        function searchTag(tag) {
+            searchInput.value = tag;
+            performSearch();
+            searchInput.focus();
+        }
+
+        // Close search results on outside click
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.search-wrapper')) {
+                searchResults.classList.remove('active');
+            }
+        });
+
+        // ==================== NAVBAR SCROLL ====================
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.getElementById('backToTop');
+
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // ==================== MOBILE MENU ====================
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // ==================== SCROLL ANIMATIONS ====================
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // ==================== COUNTER ANIMATION ====================
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        const suffix = entry.target.getAttribute('data-suffix') || '';
+                        let current = 0;
+                        const increment = target / 60;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                clearInterval(timer);
+                                current = target;
+                            }
+                            entry.target.textContent = Math.floor(current).toLocaleString() + suffix;
+                        }, 25);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(c => observer.observe(c));
+        }
+
+        // ==================== CONTACT FORM ====================
+        function handleContactForm(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const whatsappMsg = encodeURIComponent(
+                `Hello SportsFusion,\n\nName: ${firstName} ${lastName}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`
+            );
+
+            window.open(`https://wa.me/96179191280?text=${whatsappMsg}`, '_blank');
+            e.target.reset();
+
+            // Show success feedback
+            const btn = e.target.querySelector('.form-submit');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            btn.style.background = '#10b981';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+            }, 3000);
+        }
+
+        // ==================== LOADING SCREEN ====================
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 800);
+        });
+
+        // ==================== INITIALIZE ====================
+        document.addEventListener('DOMContentLoaded', function () {
+            renderProducts(products);
+            animateCounters();
+            observeElements();
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+
+        // ==================== PARALLAX EFFECT ON HERO ====================
+        window.addEventListener('scroll', function () {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('.hero-content');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.8;
+            }
+        });
+    </script>
+</body>
+</html>
+```
